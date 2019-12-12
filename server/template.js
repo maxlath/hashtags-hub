@@ -6,6 +6,7 @@ module.exports = hashtag => `<!DOCTYPE html>
   <meta charset="utf-8" />
   <title>${hashtag}</title>
   <link rel="stylesheet" href="${base}public/style.css">
+  <link rel="shortcut icon" href="${base}favicon.ico" type="image/x-icon"/>
 </head>
 <body>
   <h1>#${hashtag}</h1>
