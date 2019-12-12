@@ -14,8 +14,7 @@ module.exports = (hashtag, base) => `<!DOCTYPE html>
   <h2>Back to Wikimedia sites</h2>
   <ul>${getLinksList(wikimediaSites, hashtag)}</ul>
 </body>
-</html>
-`
+</html>`
 
 const getLinksList = (list, hashtag) => {
   return list
@@ -26,7 +25,7 @@ const getLinksList = (list, hashtag) => {
 const getlink = hashtag => platform => {
   const url = platform.formatter.replace('$1', hashtag)
   return `<li>
-    <a href="${url}" rel="noopener">
+    <a href="${url}" title="#${hashtag} on ${platform.name}" rel="noopener">
       <span class="code">#${hashtag}</span> on <strong>${platform.name}</strong>
     </a>
   </li>`
