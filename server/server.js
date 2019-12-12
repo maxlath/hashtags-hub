@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-const { name, root, port: configPort } = require('config')
+const config = require('config')
+const { name, root, port: configPort } = config
 const port = process.env.PORT ? parseInt(process.env.PORT) : configPort
 const express = require('express')
 const serveFavicon = require('serve-favicon')

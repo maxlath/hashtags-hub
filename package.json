@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "supervisor -w server,config,public server/server.js"
+    "watch": "export NODE_ENV=dev; supervisor -w server,config,public server/server.js"
   },
   "keywords": [],
   "author": "maxlath",
