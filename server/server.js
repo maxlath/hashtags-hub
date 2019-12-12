@@ -11,13 +11,11 @@ const publicFileRoot = process.cwd() + '/public/'
 const app = express()
 app.use(requestsLogger)
 
-const favicon = serveFavicon(publicFileRoot + 'favicon.ico')
-app.use(favicon)
-
 app.use(cors)
 
 const homeHtmlPath = process.cwd() + '/server/home.html'
 app.get(`${root}/`, (req, res) => res.sendFile(homeHtmlPath))
+app.use(`${root}/favicon.ico`, (req, res) => res.sendFile(`${publicFileRoot}favicon.ico`))
 app.use(`${root}/public`, express.static(publicFileRoot))
 app.get(`${root}/:hashtag`, require('./hashtag'))
 
