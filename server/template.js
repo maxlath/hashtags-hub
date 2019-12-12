@@ -1,4 +1,6 @@
-module.exports = (hashtag, base) => `<!DOCTYPE html>
+const { base } = require('config')
+
+module.exports = hashtag => `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
@@ -25,11 +27,14 @@ const getLinksList = (list, hashtag) => {
 const getlink = hashtag => platform => {
   const url = platform.formatter.replace('$1', hashtag)
   return `<li>
+    ${getIcon(platform)}
     <a href="${url}" title="#${hashtag} on ${platform.name}" rel="noopener">
       <span class="code">#${hashtag}</span> on <strong>${platform.name}</strong>
     </a>
   </li>`
 }
+
+const getIcon = ({ name }) => `<img src="${base}public/${name.toLowerCase()}_icon.png" alt="${name} icon"/>`
 
 const socialMedia = [
   { name: 'Mastodon', formatter: 'https://mastodon.social/tags/$1' },

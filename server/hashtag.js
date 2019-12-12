@@ -6,6 +6,6 @@ module.exports = (req, res) => {
   if (req.params.hashtag[0] === '#') {
     res.redirect(`${base}${req.params.hashtag.substring(1)}`)
   } else {
-    res.send(template(req.params.hashtag, base))
+    res.send(template(req.params.hashtag))
   }
 }

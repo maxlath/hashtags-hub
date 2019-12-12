@@ -1,6 +1,19 @@
 body{
   font-family: sans-serif;
 }
+h2{
+  margin-top: 3em;
+  font-size: 1.1rem;
+}
+li{
+  margin: 1em;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+li img{
+  margin-right: 1em;
+}
 .code{
   font-family: monospace;
   font-size: 1.2em;
@@ -8,11 +21,4 @@ body{
 a{
   color: #222;
   font-size: 1.5em;
-}
-li{
-  margin: 1em;
-}
-h2{
-  margin-top: 3em;
-  font-size: 1.1rem;
 }
