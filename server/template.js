@@ -2,13 +2,13 @@ module.exports = hashtag => `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>hashtag-hub</title>
+  <title>#${hashtag}</title>
   <style type="text/css">
     body{
       font-family: sans-serif;
     }
-    pre{
-      display: inline;
+    .code{
+      font-family: monospace;
       font-size: 1.2em;
     }
     a{
@@ -37,7 +37,7 @@ const getlink = hashtag => platform => {
   const url = platform.formatter.replace('$1', hashtag)
   return `<li>
     <a href="${url}" rel="noopener">
-      <pre>#${hashtag}</pre> on <strong>${platform.name}</strong>
+      <span class="code">#${hashtag}</span> on <strong>${platform.name}</strong>
     </a>
   </li>`
 }

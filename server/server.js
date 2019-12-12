@@ -15,7 +15,9 @@ app.use(favicon)
 
 app.use(cors)
 
-app.get(`${root}/`, (req, res) => res.send('hi'))
+const homeHtmlPath = process.cwd() + '/server/home.html'
+app.get(`${root}/`, (req, res) => res.sendFile(homeHtmlPath))
+
 app.get(`${root}/:hashtag`, require('./hashtag'))
 
 app.listen(port, err => {
