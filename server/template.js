@@ -46,5 +46,6 @@ const platforms = [
   { name: 'Mastodon', formatter: 'https://mastodon.social/tags/$1' },
   { name: 'Twitter', formatter: 'https://twitter.com/hashtag/$1' },
   { name: 'Facebook', formatter: 'https://facebook.com/hashtag/$1' },
-  { name: 'Flickr', formatter: 'https://www.flickr.com/photos/tags/$1' }
+  { name: 'Flickr', formatter: 'https://www.flickr.com/photos/tags/$1' },
+  { name: 'Gfycat', formatter: 'https://gfycat.com/fr/gifs/tag/$1' }
 ]
