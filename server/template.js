@@ -1,24 +1,9 @@
-module.exports = hashtag => `<!DOCTYPE html>
+module.exports = (hashtag, base) => `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
   <title>${hashtag}</title>
-  <style type="text/css">
-    body{
-      font-family: sans-serif;
-    }
-    .code{
-      font-family: monospace;
-      font-size: 1.2em;
-    }
-    a{
-      color: #222;
-      font-size: 1.5em;
-    }
-    li{
-      margin: 1em;
-    }
-  </style>
+  <link rel="stylesheet" href="${base}public/style.css">
 </head>
 <body>
   <h1>#${hashtag}</h1>

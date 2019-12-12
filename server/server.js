@@ -18,7 +18,7 @@ app.use(cors)
 
 const homeHtmlPath = process.cwd() + '/server/home.html'
 app.get(`${root}/`, (req, res) => res.sendFile(homeHtmlPath))
-
+app.use(`${root}/public`, express.static(publicFileRoot))
 app.get(`${root}/:hashtag`, require('./hashtag'))
 
 app.listen(port, err => {
