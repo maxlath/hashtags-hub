@@ -1,8 +1,18 @@
-# hashtags-hub
+# [hashtags-hub](https://tools.wmflabs.org/hashtags-hub)
 
 A web service to get links to hashtag pages on different web platforms. The main purpose of this tool is to be used on Wikidata as the ['formatter URL' (P1630)](https://www.wikidata.org/wiki/Property:P1630) value of ['hashtag' (P2572)](https://www.wikidata.org/wiki/Property:P2572), without having to systematically link to a unique centralized platform, hashtags being, most of the time, not bound to a single platform.
 
-## Setup on Toolforge
+## Install
+
+### Development
+```sh
+git clone https://github.com/maxlath/hashtags-hub
+cd hashtags-hub
+npm install
+npm run watch
+```
+
+### Deploy on Toolforge
 
 ```sh
 mkdir -p ~/www
