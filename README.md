@@ -35,7 +35,7 @@ exit
 webservice --backend=kubernetes node10 start
 
 # get the logs
-kubectl get pods
+kubectl logs -f $(kubectl get pods | grep hashtags-hub | grep Running | awk '{print $1}')
 ```
 
 *see also [`Hub` setup instructions](https://github.com/maxlath/hub/blob/master/docs/deploy.md)*
