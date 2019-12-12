@@ -2,7 +2,7 @@ module.exports = hashtag => `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>#${hashtag}</title>
+  <title>${hashtag}</title>
   <style type="text/css">
     body{
       font-family: sans-serif;
