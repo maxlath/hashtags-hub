@@ -1,5 +1,5 @@
 const { base } = require('config')
-const template = require('./template')
+const template = require('../templates/hashtag')
 
 module.exports = (req, res) => {
   // Will be reached when the '#' was url-encoded
