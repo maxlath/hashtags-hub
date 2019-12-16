@@ -10,10 +10,7 @@ module.exports = hashtag => `<!DOCTYPE html>
 </head>
 <body>
   <h1>#${hashtag}</h1>
-  <h2>Social Media</h2>
-  <ul>${getLinksList(socialMedia, hashtag)}</ul>
-  <h2>Images</h2>
-  <ul>${getLinksList(imagePlatforms, hashtag)}</ul>
+  <ul>${getLinksList(platforms, hashtag)}</ul>
   <h2>Back to Wikimedia sites</h2>
   <ul>${getLinksList(wikimediaSites, hashtag)}</ul>
 </body>
@@ -37,15 +34,15 @@ const getlink = hashtag => platform => {
 
 const getIcon = ({ name }) => `<img src="${base}public/${name.toLowerCase()}_icon.png" alt="${name} icon"/>`
 
-const socialMedia = [
-  { name: 'Mastodon', formatter: 'https://mastodon.social/tags/$1' },
-  { name: 'Twitter', formatter: 'https://twitter.com/hashtag/$1' },
+const platforms = [
+  { name: 'Deviantart', formatter: 'https://www.deviantart.com/search?q=$1' },
   { name: 'Facebook', formatter: 'https://facebook.com/hashtag/$1' },
-]
-
-const imagePlatforms = [
   { name: 'Flickr', formatter: 'https://www.flickr.com/photos/tags/$1' },
-  { name: 'Gfycat', formatter: 'https://gfycat.com/fr/gifs/tag/$1' }
+  { name: 'Gfycat', formatter: 'https://gfycat.com/fr/gifs/tag/$1' },
+  { name: 'Instagram', formatter: 'https://www.instagram.com/explore/tags/$1' },
+  { name: 'Mastodon', formatter: 'https://mastodon.social/tags/$1' },
+  { name: 'Tumblr', formatter: 'https://www.tumblr.com/tagged/$1' },
+  { name: 'Twitter', formatter: 'https://twitter.com/hashtag/$1' },
 ]
 
 const wikimediaSites = [
