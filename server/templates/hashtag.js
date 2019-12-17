@@ -47,8 +47,11 @@ const platforms = [
   { name: 'Github', formatter: 'https://github.com/topics/$1' },
   { name: 'Instagram', formatter: 'https://www.instagram.com/explore/tags/$1' },
   { name: 'Mastodon', formatter: 'https://mastodon.social/tags/$1' },
+  { name: 'PeerTube', formatter: 'https://peertube.social/search?tagsOneOf=$1' },
+  { name: 'Pixelfed', formatter: 'https://pixelfed.fr/discover/tags/$1' },
   { name: 'Tumblr', formatter: 'https://www.tumblr.com/tagged/$1' },
   { name: 'Twitter', formatter: 'https://twitter.com/hashtag/$1' },
+  { name: 'Unsplash', formatter: 'https://unsplash.com/s/photos/$1' },
   { name: 'Youtube', formatter: 'https://www.youtube.com/results?search_query=%23$1' },
 ]
 
