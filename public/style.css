@@ -14,8 +14,10 @@ ul{
 }
 li{
   padding: 0;
-  margin: 1em 0;
   list-style-type: none;
+}
+.platform{
+  margin: 1em 0;
   display: flex;
   align-items: center;
 }
@@ -38,4 +40,15 @@ main{
 section{
   margin: 1em;
   padding: 1em;
+}
+.tags{
+  display: flex;
+}
+.tag{
+  margin-left: 0.5em;
+  color: white;
+  flex: 0 0 auto;
+  background-color: #ccc;
+  border-radius: 3px;
+  padding: 0.2em 0.5em;
 }
