@@ -10,9 +10,28 @@ module.exports = hashtag => `<!DOCTYPE html>
 </head>
 <body>
   <h1>#${hashtag}</h1>
-  <ul>${getLinksList(platforms, hashtag)}</ul>
-  <h2>Back to Wikimedia sites</h2>
-  <ul>${getLinksList(wikimediaSites, hashtag)}</ul>
+  <main>
+    <section>
+      <h2>Microblogging</h2>
+      <ul>${getLinksList(microbloggingPlatforms, hashtag)}</ul>
+    </section>
+    <section>
+      <h2>Image</h2>
+      <ul>${getLinksList(imagePlatforms, hashtag)}</ul>
+    </section>
+    <section>
+      <h2>Video</h2>
+      <ul>${getLinksList(videoPlatforms, hashtag)}</ul>
+    </section>
+    <section>
+      <h2>Code</h2>
+      <ul>${getLinksList(codePlatforms, hashtag)}</ul>
+    </section>
+    <section>
+      <h2>Back to Wikimedia sites</h2>
+      <ul>${getLinksList(wikimediaSites, hashtag)}</ul>
+    </section>
+  </main>
 </body>
 </html>`
 
@@ -38,22 +57,32 @@ const getIcon = ({ name, icon }) => {
   return `<img src="${base}public/${filename}" alt="${name} icon"/>`
 }
 
-const platforms = [
-  { name: 'Deviantart', formatter: 'https://www.deviantart.com/search?q=$1' },
+const microbloggingPlatforms = [
   { name: 'Diaspora', formatter: 'https://joindiaspora.com/tags/$1' },
   { name: 'Facebook', formatter: 'https://facebook.com/hashtag/$1' },
-  { name: 'Flickr', formatter: 'https://www.flickr.com/photos/tags/$1' },
-  { name: 'Gfycat', formatter: 'https://gfycat.com/fr/gifs/tag/$1' },
-  { name: 'Github', formatter: 'https://github.com/topics/$1' },
-  { name: 'Instagram', formatter: 'https://www.instagram.com/explore/tags/$1' },
   { name: 'Mastodon', formatter: 'https://mastodon.social/tags/$1' },
-  { name: 'PeerTube', formatter: 'https://peertube.social/search?tagsOneOf=$1' },
-  { name: 'Pixelfed', formatter: 'https://pixelfed.fr/discover/tags/$1' },
   { name: 'Tumblr', formatter: 'https://www.tumblr.com/tagged/$1' },
   { name: 'Twitter', formatter: 'https://twitter.com/hashtag/$1' },
+]
+
+const imagePlatforms = [
+  { name: 'Deviantart', formatter: 'https://www.deviantart.com/search?q=$1' },
+  { name: 'Flickr', formatter: 'https://www.flickr.com/photos/tags/$1' },
+  { name: 'Gfycat', formatter: 'https://gfycat.com/fr/gifs/tag/$1' },
+  { name: 'Instagram', formatter: 'https://www.instagram.com/explore/tags/$1' },
+  { name: 'Pixelfed', formatter: 'https://pixelfed.fr/discover/tags/$1' },
   { name: 'Unsplash', formatter: 'https://unsplash.com/s/photos/$1' },
+]
+
+const videoPlatforms = [
+  { name: 'PeerTube', formatter: 'https://peertube.social/search?tagsOneOf=$1' },
   { name: 'Youtube', formatter: 'https://www.youtube.com/results?search_query=%23$1' },
 ]
+
+const codePlatforms = [
+  { name: 'Github', formatter: 'https://github.com/topics/$1' },
+]
+
 
 const wikimediaSites = [
   { name: 'Wikidata', formatter: 'https://tools.wmflabs.org/hub/P2572:$1?site=wikidata' },

@@ -1,12 +1,20 @@
 body{
   font-family: sans-serif;
 }
+h1, h2{
+  text-align: center;
+}
 h2{
-  margin-top: 3em;
+  margin: 0;
   font-size: 1.1rem;
 }
+ul{
+  margin: 0;
+  padding: 0;
+}
 li{
-  margin: 1em;
+  padding: 0;
+  margin: 1em 0;
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -19,6 +27,15 @@ li img{
   font-size: 1.2em;
 }
 a{
-  color: #222;
+  color: #444;
   font-size: 1.5em;
+}
+main{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+section{
+  margin: 1em;
+  padding: 1em;
 }
