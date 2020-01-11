@@ -86,6 +86,7 @@ const imagePlatforms = [
 ]
 
 const videoPlatforms = [
+  { name: 'Dtube', formatter: 'https://d.tube/#!/t/$1', tags: [ 'libre' ] },
   { name: 'PeerTube', formatter: 'https://peertube.social/search?tagsOneOf=$1', tags: [ 'libre' ] },
   { name: 'Youtube', formatter: 'https://www.youtube.com/results?search_query=%23$1' },
 ]
