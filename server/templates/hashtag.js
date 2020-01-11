@@ -79,7 +79,7 @@ const microbloggingPlatforms = [
 const imagePlatforms = [
   { name: 'Deviantart', formatter: 'https://www.deviantart.com/search?q=$1' },
   { name: 'Flickr', formatter: 'https://www.flickr.com/photos/tags/$1' },
-  { name: 'Gfycat', formatter: 'https://gfycat.com/fr/gifs/tag/$1' },
+  { name: 'Gfycat', formatter: 'https://gfycat.com/gifs/tag/$1' },
   { name: 'Instagram', formatter: 'https://www.instagram.com/explore/tags/$1' },
   { name: 'Pixelfed', formatter: 'https://pixelfed.fr/discover/tags/$1', tags: [ 'libre' ] },
   { name: 'Unsplash', formatter: 'https://unsplash.com/s/photos/$1' },
