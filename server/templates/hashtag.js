@@ -54,7 +54,8 @@ const getlink = hashtag => platform => {
 }
 
 const getIcon = ({ name, icon }) => {
-  const filename = icon || `${name.toLowerCase()}_icon.png`
+  const formattedName = name.replace(/\s/g, '_').toLowerCase()
+  const filename = icon || `${formattedName}_icon.png`
   return `<img src="${base}public/${filename}" alt="${name} icon"/>`
 }
 
@@ -77,10 +78,12 @@ const microbloggingPlatforms = [
 ]
 
 const imagePlatforms = [
-  { name: 'Deviantart', formatter: 'https://www.deviantart.com/search?q=$1' },
+  { name: 'Deviantart', formatter: 'https://www.deviantart.com/tag/$1' },
   { name: 'Flickr', formatter: 'https://www.flickr.com/photos/tags/$1' },
   { name: 'Gfycat', formatter: 'https://gfycat.com/gifs/tag/$1' },
   { name: 'Instagram', formatter: 'https://www.instagram.com/explore/tags/$1' },
+  { name: 'Nico Nico Seiga', formatter: 'http://seiga.nicovideo.jp/tag/$1' },
+  { name: 'Pixiv', formatter: 'https://www.pixiv.net/tags/$1' },
   { name: 'Pixelfed', formatter: 'https://pixelfed.fr/discover/tags/$1', tags: [ 'libre' ] },
   { name: 'Unsplash', formatter: 'https://unsplash.com/s/photos/$1' },
 ]
