@@ -24,6 +24,10 @@ module.exports = hashtag => `<!DOCTYPE html>
       <ul>${getLinksList(videoPlatforms, hashtag)}</ul>
     </section>
     <section>
+      <h2>Audio</h2>
+      <ul>${getLinksList(audioPlatforms, hashtag)}</ul>
+    </section>
+    <section>
       <h2>Code</h2>
       <ul>${getLinksList(codePlatforms, hashtag)}</ul>
     </section>
@@ -95,6 +99,10 @@ const videoPlatforms = [
   { name: 'PeerTube', formatter: 'https://peertube.social/search?tagsOneOf=$1', tags: [ 'libre' ] },
   { name: 'TikTok', formatter: 'https://www.tiktok.com/tag/$1' },
   { name: 'Youtube', formatter: 'https://www.youtube.com/results?search_query=%23$1' },
+]
+
+const audioPlatforms = [
+  { name: 'SoundCloud', formatter: 'https://soundcloud.com/tags/$1' },
 ]
 
 const codePlatforms = [
