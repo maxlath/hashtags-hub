@@ -75,6 +75,7 @@ const microbloggingPlatforms = [
   { name: 'Mastodon', formatter: 'https://mastodon.social/tags/$1', tags: [ 'libre' ] },
   { name: 'Tumblr', formatter: 'https://www.tumblr.com/tagged/$1' },
   { name: 'Twitter', formatter: 'https://twitter.com/hashtag/$1' },
+  { name: 'Weibo', formatter: 'https://s.weibo.com/weibo/%23$1%23' },
 ]
 
 const imagePlatforms = [
@@ -83,6 +84,7 @@ const imagePlatforms = [
   { name: 'Gfycat', formatter: 'https://gfycat.com/gifs/tag/$1' },
   { name: 'Instagram', formatter: 'https://www.instagram.com/explore/tags/$1' },
   { name: 'Nico Nico Seiga', formatter: 'http://seiga.nicovideo.jp/tag/$1' },
+  { name: 'Pinterest', formatter: 'https://www.pinterest.com/search/pins/?q=%23$1' },
   { name: 'Pixiv', formatter: 'https://www.pixiv.net/tags/$1' },
   { name: 'Pixelfed', formatter: 'https://pixelfed.fr/discover/tags/$1', tags: [ 'libre' ] },
   { name: 'Unsplash', formatter: 'https://unsplash.com/s/photos/$1' },
@@ -91,6 +93,7 @@ const imagePlatforms = [
 const videoPlatforms = [
   { name: 'Dtube', formatter: 'https://d.tube/#!/t/$1', tags: [ 'libre' ] },
   { name: 'PeerTube', formatter: 'https://peertube.social/search?tagsOneOf=$1', tags: [ 'libre' ] },
+  { name: 'TikTok', formatter: 'https://www.tiktok.com/tag/$1' },
   { name: 'Youtube', formatter: 'https://www.youtube.com/results?search_query=%23$1' },
 ]
 
