@@ -1,7 +1,7 @@
 module.exports = {
   name: 'hashtags-hub',
-  root: 'hashtags-hub',
-  base: 'https://tools.wmflabs.org/hashtags-hub/',
+  root: '',
+  base: 'https://hashtags-hub.toolforge.org/',
   port: 4274,
   publicFileRoot: process.cwd() + '/public/'
 }
