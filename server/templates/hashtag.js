@@ -110,7 +110,7 @@ const codePlatforms = [
 ]
 
 const wikimediaSites = [
-  { name: 'Wikidata', formatter: 'https://tools.wmflabs.org/hub/P2572:$1?site=wikidata' },
-  { name: 'Wikipedia', formatter: 'https://tools.wmflabs.org/hub/P2572:$1?site=wikipedia' },
+  { name: 'Wikidata', formatter: 'https://hub.toolforge.org/P2572:$1?site=wikidata' },
+  { name: 'Wikipedia', formatter: 'https://hub.toolforge.org/P2572:$1?site=wikipedia' },
   { name: 'Wikimedia edit summaries', formatter: 'https://hashtags.wmflabs.org/?query=$1', article: 'in', icon: 'wm_summary_icon.png' },
 ]
