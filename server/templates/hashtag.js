@@ -87,7 +87,7 @@ const imagePlatforms = [
   { name: 'Flickr', formatter: 'https://www.flickr.com/photos/tags/$1' },
   { name: 'Gfycat', formatter: 'https://gfycat.com/gifs/tag/$1' },
   { name: 'Instagram', formatter: 'https://www.instagram.com/explore/tags/$1' },
-  { name: 'Nico Nico Seiga', formatter: 'http://seiga.nicovideo.jp/tag/$1' },
+  { name: 'Nico Nico Seiga', formatter: 'https://seiga.nicovideo.jp/tag/$1' },
   { name: 'Pinterest', formatter: 'https://www.pinterest.com/search/pins/?q=%23$1' },
   { name: 'Pixiv', formatter: 'https://www.pixiv.net/tags/$1' },
   { name: 'Pixelfed', formatter: 'https://pixelfed.fr/discover/tags/$1', tags: [ 'libre' ] },
