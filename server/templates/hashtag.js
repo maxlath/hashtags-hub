@@ -83,7 +83,7 @@ const microbloggingPlatforms = [
 ]
 
 const imagePlatforms = [
-  { name: 'Deviantart', formatter: 'https://www.deviantart.com/tag/$1' },
+  { name: 'DeviantArt', formatter: 'https://www.deviantart.com/tag/$1' },
   { name: 'Flickr', formatter: 'https://www.flickr.com/photos/tags/$1' },
   { name: 'Gfycat', formatter: 'https://gfycat.com/gifs/tag/$1' },
   { name: 'Instagram', formatter: 'https://www.instagram.com/explore/tags/$1' },
@@ -95,10 +95,10 @@ const imagePlatforms = [
 ]
 
 const videoPlatforms = [
-  { name: 'Dtube', formatter: 'https://d.tube/#!/t/$1', tags: [ 'libre' ] },
+  { name: 'DTube', formatter: 'https://d.tube/#!/t/$1', tags: [ 'libre' ] },
   { name: 'PeerTube', formatter: 'https://peertube.social/search?tagsOneOf=$1', tags: [ 'libre' ] },
   { name: 'TikTok', formatter: 'https://www.tiktok.com/tag/$1' },
-  { name: 'Youtube', formatter: 'https://www.youtube.com/results?search_query=%23$1' },
+  { name: 'YouTube', formatter: 'https://www.youtube.com/results?search_query=%23$1' },
 ]
 
 const audioPlatforms = [
@@ -106,7 +106,7 @@ const audioPlatforms = [
 ]
 
 const codePlatforms = [
-  { name: 'Github', formatter: 'https://github.com/topics/$1' },
+  { name: 'GitHub', formatter: 'https://github.com/topics/$1' },
 ]
 
 const wikimediaSites = [
