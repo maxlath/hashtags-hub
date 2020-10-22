@@ -1,12 +1,10 @@
-const { base } = require('config')
-
 module.exports = hashtag => `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
   <title>&#35;${hashtag} - hashtag hub</title>
-  <link rel="stylesheet" href="${base}public/style.css">
-  <link rel="shortcut icon" href="${base}favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="/public/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 </head>
 <body>
   <h1>#${hashtag}</h1>
@@ -60,7 +58,7 @@ const getlink = hashtag => platform => {
 const getIcon = ({ name, icon }) => {
   const formattedName = name.replace(/\s/g, '_').toLowerCase()
   const filename = icon || `${formattedName}_icon.png`
-  return `<img src="${base}public/${filename}" alt="${name} icon"/>`
+  return `<img src="/public/${filename}" alt="${name} icon"/>`
 }
 
 const getTags = ({ tags }) => {

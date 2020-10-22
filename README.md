@@ -20,11 +20,6 @@ cd ~/www
 git clone https://github.com/maxlath/hashtags-hub js
 cd js
 
-echo "module.exports = {
-  // Customize root to match the URL passed by Nginx
-  root: '/hashtags-hub'
-}" > config/local.js
-
 # See https://wikitech.wikimedia.org/wiki/Help:Toolforge/Web#node.js_web_services
 webservice --backend=kubernetes node10 shell
 cd ~/www/js
