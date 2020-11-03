@@ -74,6 +74,7 @@ const getTags = ({ tags }) => {
 const microbloggingPlatforms = [
   { name: 'Diaspora', formatter: 'https://joindiaspora.com/tags/$1', tags: [ 'libre' ] },
   { name: 'Facebook', formatter: 'https://facebook.com/hashtag/$1' },
+  { name: 'LinkedIn', formatter: 'https://www.linkedin.com/feed/hashtag/?keywords=$1' },
   { name: 'Mastodon', formatter: 'https://mastodon.social/tags/$1', tags: [ 'libre' ] },
   { name: 'Tumblr', formatter: 'https://www.tumblr.com/tagged/$1' },
   { name: 'Twitter', formatter: 'https://twitter.com/hashtag/$1' },
