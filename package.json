@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "update-icons": "./scripts/update_icons",
     "watch": "export NODE_ENV=dev; supervisor -w server,config,public server/server.js"
   },
   "keywords": [],

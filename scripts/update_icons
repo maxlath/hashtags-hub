@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+which gm > /dev/null || {
+  echo "requires to have GraphicsMagick https://www.graphicsmagick.org installed"
+  exit 1
+}
+
+cd assets
+
+for file in *.png;
+do
+  gm convert $file -resize 32x32 ../public/$file;
+done
