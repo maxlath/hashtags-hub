@@ -2,7 +2,7 @@ module.exports = hashtag => `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>&#35;${hashtag} - hashtag hub</title>
+  <title>${hashtag} - hashtag hub</title>
   <link rel="stylesheet" href="/public/style.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 </head>
