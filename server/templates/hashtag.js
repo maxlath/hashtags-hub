@@ -98,6 +98,7 @@ const videoPlatforms = [
   { name: 'DTube', formatter: 'https://d.tube/#!/t/$1', tags: [ 'libre' ] },
   { name: 'PeerTube', formatter: 'https://sepiasearch.org/search?tagsOneOf=$1', tags: [ 'libre' ] },
   { name: 'TikTok', formatter: 'https://www.tiktok.com/tag/$1' },
+  { name: 'Twitch', formatter: 'https://www.twitch.tv/directory/all/tags/$1' },
   { name: 'YouTube', formatter: 'https://www.youtube.com/hashtag/$1' },
 ]
 
