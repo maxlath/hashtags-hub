@@ -76,6 +76,7 @@ const microbloggingPlatforms = [
   { name: 'Facebook', formatter: 'https://facebook.com/hashtag/$1' },
   { name: 'LinkedIn', formatter: 'https://www.linkedin.com/feed/hashtag/?keywords=$1' },
   { name: 'Mastodon', formatter: 'https://mastodon.social/tags/$1', tags: [ 'libre' ] },
+  { name: 'Medium', formatter: 'https://medium.com/tag/$1' },
   { name: 'Tumblr', formatter: 'https://www.tumblr.com/tagged/$1' },
   { name: 'Twitter', formatter: 'https://twitter.com/hashtag/$1' },
   { name: 'Weibo', formatter: 'https://s.weibo.com/weibo/%23$1%23' },
