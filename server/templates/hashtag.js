@@ -55,10 +55,14 @@ const getlink = hashtag => platform => {
   </li>`
 }
 
-const getIcon = ({ name, icon }) => {
-  const formattedName = name.replace(/\s/g, '_').toLowerCase()
-  const filename = icon || `${formattedName}_icon.png`
-  return `<img src="/public/${filename}" alt="${name} icon"/>`
+const getIcon = ({ name, icon, hasIcon = true }) => {
+  if (hasIcon) {
+    const formattedName = name.replace(/\s/g, '_').toLowerCase()
+    const filename = icon || `${formattedName}_icon.png`
+    return `<img src="/public/${filename}" alt="${name} icon"/>`
+  } else {
+    return '<div class="no-icon"></div>'
+  }
 }
 
 const getTags = ({ tags }) => {
@@ -74,6 +78,7 @@ const getTags = ({ tags }) => {
 const microbloggingPlatforms = [
   { name: 'Diaspora', formatter: 'https://joindiaspora.com/tags/$1', tags: [ 'libre' ] },
   { name: 'Facebook', formatter: 'https://facebook.com/hashtag/$1' },
+  { name: 'Fediverse', formatter: 'https://fediverse.info/explore/topics/$1', tags: [ 'libre' ], hasIcon: false },
   { name: 'LinkedIn', formatter: 'https://www.linkedin.com/feed/hashtag/?keywords=$1' },
   { name: 'Mastodon', formatter: 'https://mastodon.social/tags/$1', tags: [ 'libre' ] },
   { name: 'Medium', formatter: 'https://medium.com/tag/$1' },

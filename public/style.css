@@ -21,8 +21,12 @@ li{
   display: flex;
   align-items: center;
 }
-li img{
+li img, li .no-icon{
   margin-right: 1em;
+}
+.no-icon{
+  width: 32px;
+  height: 32px;
 }
 .code{
   font-family: monospace;
