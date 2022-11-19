@@ -80,7 +80,7 @@ const microbloggingPlatforms = [
   { name: 'Facebook', formatter: 'https://facebook.com/hashtag/$1' },
   { name: 'Fediverse', formatter: 'https://fediverse.info/explore/topics/$1', tags: [ 'libre' ], hasIcon: false },
   { name: 'LinkedIn', formatter: 'https://www.linkedin.com/feed/hashtag/?keywords=$1' },
-  { name: 'Mastodon', formatter: 'https://mastodon.social/tags/$1', tags: [ 'libre' ] },
+  { name: 'Mastodon', formatter: 'https://wikis.world/tags/$1', tags: [ 'libre' ] },
   { name: 'Medium', formatter: 'https://medium.com/tag/$1' },
   { name: 'Tumblr', formatter: 'https://www.tumblr.com/tagged/$1' },
   { name: 'Twitter', formatter: 'https://twitter.com/hashtag/$1' },
