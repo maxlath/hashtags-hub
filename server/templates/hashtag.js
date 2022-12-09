@@ -124,6 +124,7 @@ const audioPlatforms = [
 const codePlatforms = [
   { name: 'GitHub', formatter: 'https://github.com/topics/$1' },
   { name: 'GitLab', formatter: 'https://gitlab.com/explore/projects/topics/$1', tags: [ 'libre' ] },
+  { name: 'StackOverflow', formatter: 'https://stackoverflow.com/questions/tagged/$1', tags: ['libre' ] },
 ]
 
 const wikimediaSites = [
