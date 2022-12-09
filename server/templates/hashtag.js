@@ -79,6 +79,7 @@ const microbloggingPlatforms = [
   { name: 'Diaspora', formatter: 'https://joindiaspora.com/tags/$1', tags: [ 'libre' ] },
   { name: 'Facebook', formatter: 'https://facebook.com/hashtag/$1' },
   { name: 'Fediverse', formatter: 'https://fediverse.info/explore/topics/$1', tags: [ 'libre' ], hasIcon: false },
+  { name: 'Gettr', formatter: 'https://gettr.com/hashtag/%23$1' },
   { name: 'LinkedIn', formatter: 'https://www.linkedin.com/feed/hashtag/?keywords=$1' },
   { name: 'Mastodon', formatter: 'https://wikis.world/tags/$1', tags: [ 'libre' ] },
   { name: 'Medium', formatter: 'https://medium.com/tag/$1' },
