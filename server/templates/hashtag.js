@@ -108,6 +108,7 @@ const imagePlatforms = [
 const videoPlatforms = [
   { name: 'DTube', formatter: 'https://d.tube/#!/t/$1', tags: [ 'libre' ] },
   { name: 'Internet Archive', formatter: 'https://archive.org/search.php?query=subject%3A%22$1%22' },
+  { name: 'Newgrounds', formatter: 'https://www.newgrounds.com/search/summary?match=tags&tags=$1' },
   { name: 'PeerTube', formatter: 'https://sepiasearch.org/search?tagsOneOf=$1', tags: [ 'libre' ] },
   { name: 'TikTok', formatter: 'https://www.tiktok.com/tag/$1' },
   { name: 'Twitch', formatter: 'https://www.twitch.tv/directory/all/tags/$1' },
