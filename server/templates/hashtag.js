@@ -116,6 +116,7 @@ const videoPlatforms = [
 ]
 
 const audioPlatforms = [
+  { name: 'Bandcamp', formatter: 'https://bandcamp.com/tag/$1' },
   { name: 'SoundCloud', formatter: 'https://soundcloud.com/tags/$1' },
 ]
 
