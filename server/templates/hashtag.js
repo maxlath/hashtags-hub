@@ -86,6 +86,7 @@ const microbloggingPlatforms = [
   { name: 'Medium', formatter: 'https://medium.com/tag/$1' },
   { name: 'Reddit', formatter: 'https://www.reddit.com/t/$1/' },
   { name: 'Taringa!', formatter: 'https://www.taringa.net/tags/$1' },
+  { name: 'Truth Social', formatter: 'https://truthsocial.com/tags/$1' },
   { name: 'Tumblr', formatter: 'https://www.tumblr.com/tagged/$1' },
   { name: 'Twitter', formatter: 'https://twitter.com/hashtag/$1' },
   { name: 'Weibo', formatter: 'https://s.weibo.com/weibo/%23$1%23' },
