@@ -80,8 +80,11 @@ const microbloggingPlatforms = [
   { name: 'Facebook', formatter: 'https://facebook.com/hashtag/$1' },
   { name: 'Fediverse', formatter: 'https://fediverse.info/explore/topics/$1', tags: [ 'libre' ], hasIcon: false },
   { name: 'LinkedIn', formatter: 'https://www.linkedin.com/feed/hashtag/?keywords=$1' },
+  { name: 'LiveJournal', formatter: 'https://www.livejournal.com/rsearch?tags=$1&searchArea=post' },
   { name: 'Mastodon', formatter: 'https://wikis.world/tags/$1', tags: [ 'libre' ] },
   { name: 'Medium', formatter: 'https://medium.com/tag/$1' },
+  { name: 'Reddit', formatter: 'https://www.reddit.com/t/$1/' },
+  { name: 'Taringa!', formatter: 'https://www.taringa.net/tags/$1' },
   { name: 'Tumblr', formatter: 'https://www.tumblr.com/tagged/$1' },
   { name: 'Twitter', formatter: 'https://twitter.com/hashtag/$1' },
   { name: 'Weibo', formatter: 'https://s.weibo.com/weibo/%23$1%23' },
@@ -102,6 +105,8 @@ const imagePlatforms = [
 
 const videoPlatforms = [
   { name: 'DTube', formatter: 'https://d.tube/#!/t/$1', tags: [ 'libre' ] },
+  { name: 'Internet Archive', formatter: 'https://archive.org/search.php?query=subject%3A%22$1%22' },
+  { name: 'Newgrounds', formatter: 'https://www.newgrounds.com/search/summary?match=tags&tags=$1' },
   { name: 'PeerTube', formatter: 'https://sepiasearch.org/search?tagsOneOf=$1', tags: [ 'libre' ] },
   { name: 'TikTok', formatter: 'https://www.tiktok.com/tag/$1' },
   { name: 'Twitch', formatter: 'https://www.twitch.tv/directory/all/tags/$1' },
@@ -109,12 +114,15 @@ const videoPlatforms = [
 ]
 
 const audioPlatforms = [
+  { name: 'Bandcamp', formatter: 'https://bandcamp.com/tag/$1' },
+  { name: 'Mixcloud', formatter: 'https://www.mixcloud.com/discover/$1/' },
   { name: 'SoundCloud', formatter: 'https://soundcloud.com/tags/$1' },
 ]
 
 const codePlatforms = [
   { name: 'GitHub', formatter: 'https://github.com/topics/$1' },
   { name: 'GitLab', formatter: 'https://gitlab.com/explore/projects/topics/$1', tags: [ 'libre' ] },
+  { name: 'StackOverflow', formatter: 'https://stackoverflow.com/questions/tagged/$1', tags: ['libre' ] },
 ]
 
 const wikimediaSites = [
