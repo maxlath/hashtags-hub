@@ -126,13 +126,13 @@ const audioPlatforms = [
 const codePlatforms = [
   { name: 'GitHub', formatter: 'https://github.com/topics/$1' },
   { name: 'GitLab', formatter: 'https://gitlab.com/explore/projects/topics/$1', tags: [ 'libre' ] },
-  { name: 'StackOverflow', formatter: 'https://stackoverflow.com/questions/tagged/$1', tags: ['libre' ] },
+  { name: 'StackOverflow', formatter: 'https://stackoverflow.com/questions/tagged/$1' },
 ]
 
 const wikimediaSites = [
-  { name: 'Wikidata', formatter: 'https://hub.toolforge.org/P2572:$1?site=wikidata' },
-  { name: 'Wikipedia', formatter: 'https://hub.toolforge.org/P2572:$1?site=wikipedia' },
-  { name: 'Wikimedia edit summaries', formatter: 'https://hashtags.wmflabs.org/?query=$1', article: 'in', icon: 'wm_summary_icon.png' },
+  { name: 'Wikidata', formatter: 'https://hub.toolforge.org/P2572:$1?site=wikidata', tags: ['libre' ] },
+  { name: 'Wikipedia', formatter: 'https://hub.toolforge.org/P2572:$1?site=wikipedia', tags: ['libre' ] },
+  { name: 'Wikimedia edit summaries', formatter: 'https://hashtags.wmflabs.org/?query=$1', article: 'in', icon: 'wm_summary_icon.png', tags: ['libre' ] },
 ]
 
 const miscellaneous = [
