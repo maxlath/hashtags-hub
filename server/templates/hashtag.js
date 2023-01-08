@@ -30,6 +30,10 @@ module.exports = hashtag => `<!DOCTYPE html>
       <ul>${getLinksList(codePlatforms, hashtag)}</ul>
     </section>
     <section>
+      <h2>Miscellaneous</h2>
+      <ul>${getLinksList(miscellaneous, hashtag)}</ul>
+    </section>
+    <section>
       <h2>Wikimedia</h2>
       <ul>${getLinksList(wikimediaSites, hashtag)}</ul>
     </section>
@@ -129,4 +133,8 @@ const wikimediaSites = [
   { name: 'Wikidata', formatter: 'https://hub.toolforge.org/P2572:$1?site=wikidata' },
   { name: 'Wikipedia', formatter: 'https://hub.toolforge.org/P2572:$1?site=wikipedia' },
   { name: 'Wikimedia edit summaries', formatter: 'https://hashtags.wmflabs.org/?query=$1', article: 'in', icon: 'wm_summary_icon.png' },
+]
+
+const miscellaneous = [
+  { name: 'Know Your Meme', formatter: 'https://knowyourmeme.com/search?q=tags%3A%28%22$1%22%29' },
 ]
