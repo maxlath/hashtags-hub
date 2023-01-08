@@ -48,7 +48,11 @@ const getLinksList = (list, hashtag) => {
 }
 
 const getlink = hashtag => platform => {
-  const url = platform.formatter.replace('$1', hashtag)
+  let urlHashtag = hashtag
+  if (platform.separator) {
+    urlHashtag = urlHashtag.replace(/[\s-]/g, platform.separator)
+  }
+  const url = platform.formatter.replace('$1', urlHashtag)
   const article = platform.article || 'on'
   return `<li class="platform">
     ${getIcon(platform)}
@@ -136,5 +140,5 @@ const wikimediaSites = [
 ]
 
 const miscellaneous = [
-  { name: 'Know Your Meme', formatter: 'https://knowyourmeme.com/search?q=tags%3A%28%22$1%22%29' },
+  { name: 'Know Your Meme', formatter: 'https://knowyourmeme.com/search?q=tags%3A%28%22$1%22%29', separator: '+' },
 ]
