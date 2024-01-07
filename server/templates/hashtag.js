@@ -52,7 +52,7 @@ const getlink = hashtag => platform => {
   if (platform.separator) {
     urlHashtag = urlHashtag.replace(/[\s-]/g, platform.separator)
   }
-  const url = platform.formatter.replace('$1', urlHashtag)
+  const url = platform.pattern.replace('$1', urlHashtag)
   const article = platform.article || 'on'
   return `<li class="platform">
     ${getIcon(platform)}
@@ -84,61 +84,61 @@ const getTags = ({ tags }) => {
 }
 
 const microbloggingPlatforms = [
-  { name: 'Diaspora', formatter: 'https://joindiaspora.com/tags/$1', tags: [ 'libre' ] },
-  { name: 'Facebook', formatter: 'https://facebook.com/hashtag/$1' },
-  { name: 'Fediverse', formatter: 'https://fediverse.info/explore/topics/$1', tags: [ 'libre' ], hasIcon: false },
-  { name: 'LinkedIn', formatter: 'https://www.linkedin.com/feed/hashtag/?keywords=$1' },
-  { name: 'LiveJournal', formatter: 'https://www.livejournal.com/rsearch?tags=$1&searchArea=post' },
-  { name: 'Mastodon', formatter: 'https://wikis.world/tags/$1', tags: [ 'libre' ] },
-  { name: 'Medium', formatter: 'https://medium.com/tag/$1' },
-  { name: 'Reddit', formatter: 'https://www.reddit.com/t/$1/' },
-  { name: 'Taringa!', formatter: 'https://www.taringa.net/tags/$1' },
-  { name: 'Tumblr', formatter: 'https://www.tumblr.com/tagged/$1' },
-  { name: 'Twitter', formatter: 'https://twitter.com/hashtag/$1' },
-  { name: 'Weibo', formatter: 'https://s.weibo.com/weibo/%23$1%23' },
+  { name: 'Diaspora', pattern: 'https://joindiaspora.com/tags/$1', tags: [ 'libre' ] },
+  { name: 'Facebook', pattern: 'https://facebook.com/hashtag/$1' },
+  { name: 'Fediverse', pattern: 'https://fediverse.info/explore/topics/$1', tags: [ 'libre' ], hasIcon: false },
+  { name: 'LinkedIn', pattern: 'https://www.linkedin.com/feed/hashtag/?keywords=$1' },
+  { name: 'LiveJournal', pattern: 'https://www.livejournal.com/rsearch?tags=$1&searchArea=post' },
+  { name: 'Mastodon', pattern: 'https://wikis.world/tags/$1', tags: [ 'libre' ] },
+  { name: 'Medium', pattern: 'https://medium.com/tag/$1' },
+  { name: 'Reddit', pattern: 'https://www.reddit.com/t/$1/' },
+  { name: 'Taringa!', pattern: 'https://www.taringa.net/tags/$1' },
+  { name: 'Tumblr', pattern: 'https://www.tumblr.com/tagged/$1' },
+  { name: 'Twitter', pattern: 'https://twitter.com/hashtag/$1' },
+  { name: 'Weibo', pattern: 'https://s.weibo.com/weibo/%23$1%23' },
 ]
 
 const imagePlatforms = [
-  { name: 'DeviantArt', formatter: 'https://www.deviantart.com/tag/$1' },
-  { name: 'Flickr', formatter: 'https://www.flickr.com/photos/tags/$1' },
-  { name: 'Gfycat', formatter: 'https://gfycat.com/gifs/tag/$1' },
-  { name: 'Instagram', formatter: 'https://www.instagram.com/explore/tags/$1' },
-  { name: 'Imgur', formatter: 'https://imgur.com/t/$1' },
-  { name: 'Nico Nico Seiga', formatter: 'https://seiga.nicovideo.jp/tag/$1' },
-  { name: 'Pinterest', formatter: 'https://www.pinterest.com/search/pins/?q=%23$1' },
-  { name: 'Pixiv', formatter: 'https://www.pixiv.net/tags/$1' },
-  { name: 'Pixelfed', formatter: 'https://pixelfed.fr/discover/tags/$1', tags: [ 'libre' ] },
-  { name: 'Unsplash', formatter: 'https://unsplash.com/s/photos/$1' },
+  { name: 'DeviantArt', pattern: 'https://www.deviantart.com/tag/$1' },
+  { name: 'Flickr', pattern: 'https://www.flickr.com/photos/tags/$1' },
+  { name: 'Gfycat', pattern: 'https://gfycat.com/gifs/tag/$1' },
+  { name: 'Instagram', pattern: 'https://www.instagram.com/explore/tags/$1' },
+  { name: 'Imgur', pattern: 'https://imgur.com/t/$1' },
+  { name: 'Nico Nico Seiga', pattern: 'https://seiga.nicovideo.jp/tag/$1' },
+  { name: 'Pinterest', pattern: 'https://www.pinterest.com/search/pins/?q=%23$1' },
+  { name: 'Pixiv', pattern: 'https://www.pixiv.net/tags/$1' },
+  { name: 'Pixelfed', pattern: 'https://pixelfed.fr/discover/tags/$1', tags: [ 'libre' ] },
+  { name: 'Unsplash', pattern: 'https://unsplash.com/s/photos/$1' },
 ]
 
 const videoPlatforms = [
-  { name: 'DTube', formatter: 'https://d.tube/#!/t/$1', tags: [ 'libre' ] },
-  { name: 'Internet Archive', formatter: 'https://archive.org/search.php?query=subject%3A%22$1%22' },
-  { name: 'Newgrounds', formatter: 'https://www.newgrounds.com/search/summary?match=tags&tags=$1' },
-  { name: 'PeerTube', formatter: 'https://sepiasearch.org/search?tagsOneOf=$1', tags: [ 'libre' ] },
-  { name: 'TikTok', formatter: 'https://www.tiktok.com/tag/$1' },
-  { name: 'Twitch', formatter: 'https://www.twitch.tv/directory/all/tags/$1' },
-  { name: 'YouTube', formatter: 'https://www.youtube.com/hashtag/$1' },
+  { name: 'DTube', pattern: 'https://d.tube/#!/t/$1', tags: [ 'libre' ] },
+  { name: 'Internet Archive', pattern: 'https://archive.org/search.php?query=subject%3A%22$1%22' },
+  { name: 'Newgrounds', pattern: 'https://www.newgrounds.com/search/summary?match=tags&tags=$1' },
+  { name: 'PeerTube', pattern: 'https://sepiasearch.org/search?tagsOneOf=$1', tags: [ 'libre' ] },
+  { name: 'TikTok', pattern: 'https://www.tiktok.com/tag/$1' },
+  { name: 'Twitch', pattern: 'https://www.twitch.tv/directory/all/tags/$1' },
+  { name: 'YouTube', pattern: 'https://www.youtube.com/hashtag/$1' },
 ]
 
 const audioPlatforms = [
-  { name: 'Bandcamp', formatter: 'https://bandcamp.com/tag/$1' },
-  { name: 'Mixcloud', formatter: 'https://www.mixcloud.com/discover/$1/' },
-  { name: 'SoundCloud', formatter: 'https://soundcloud.com/tags/$1' },
+  { name: 'Bandcamp', pattern: 'https://bandcamp.com/tag/$1' },
+  { name: 'Mixcloud', pattern: 'https://www.mixcloud.com/discover/$1/' },
+  { name: 'SoundCloud', pattern: 'https://soundcloud.com/tags/$1' },
 ]
 
 const codePlatforms = [
-  { name: 'GitHub', formatter: 'https://github.com/topics/$1' },
-  { name: 'GitLab', formatter: 'https://gitlab.com/explore/projects/topics/$1', tags: [ 'libre' ] },
-  { name: 'StackOverflow', formatter: 'https://stackoverflow.com/questions/tagged/$1' },
+  { name: 'GitHub', pattern: 'https://github.com/topics/$1' },
+  { name: 'GitLab', pattern: 'https://gitlab.com/explore/projects/topics/$1', tags: [ 'libre' ] },
+  { name: 'StackOverflow', pattern: 'https://stackoverflow.com/questions/tagged/$1' },
 ]
 
 const wikimediaSites = [
-  { name: 'Wikidata', formatter: 'https://hub.toolforge.org/P2572:$1?site=wikidata', tags: ['libre' ] },
-  { name: 'Wikipedia', formatter: 'https://hub.toolforge.org/P2572:$1?site=wikipedia', tags: ['libre' ] },
-  { name: 'Wikimedia edit summaries', formatter: 'https://hashtags.wmflabs.org/?query=$1', article: 'in', icon: 'wm_summary_icon.png', tags: ['libre' ] },
+  { name: 'Wikidata', pattern: 'https://hub.toolforge.org/P2572:$1?site=wikidata', tags: ['libre' ] },
+  { name: 'Wikipedia', pattern: 'https://hub.toolforge.org/P2572:$1?site=wikipedia', tags: ['libre' ] },
+  { name: 'Wikimedia edit summaries', pattern: 'https://hashtags.wmflabs.org/?query=$1', article: 'in', icon: 'wm_summary_icon.png', tags: ['libre' ] },
 ]
 
 const miscellaneous = [
-  { name: 'Know Your Meme', formatter: 'https://knowyourmeme.com/search?q=tags%3A%28%22$1%22%29', separator: '+' },
+  { name: 'Know Your Meme', pattern: 'https://knowyourmeme.com/search?q=tags%3A%28%22$1%22%29', separator: '+' },
 ]
