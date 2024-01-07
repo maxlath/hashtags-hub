@@ -52,6 +52,12 @@ const getlink = hashtag => platform => {
   if (platform.separator) {
     urlHashtag = urlHashtag.replace(/[\s-]/g, platform.separator)
   }
+  if (platform.formatters) {
+    for (const formatterName of platform.formatters) {
+      const formatterFn = formatters[formatterName]
+      urlHashtag = formatterFn(urlHashtag)
+    }
+  }
   const url = platform.pattern.replace('$1', urlHashtag)
   const article = platform.article || 'on'
   return `<li class="platform">
@@ -61,6 +67,10 @@ const getlink = hashtag => platform => {
     </a>
     ${getTags(platform)}
   </li>`
+}
+
+const formatters = {
+  lowercase: str => str.toLowerCase()
 }
 
 const getIcon = ({ name, icon, hasIcon = true }) => {
@@ -102,7 +112,7 @@ const imagePlatforms = [
   { name: 'DeviantArt', pattern: 'https://www.deviantart.com/tag/$1' },
   { name: 'Flickr', pattern: 'https://www.flickr.com/photos/tags/$1' },
   { name: 'Gfycat', pattern: 'https://gfycat.com/gifs/tag/$1' },
-  { name: 'Instagram', pattern: 'https://www.instagram.com/explore/tags/$1' },
+  { name: 'Instagram', pattern: 'https://www.instagram.com/explore/tags/$1', formatters: [ 'lowercase' ] },
   { name: 'Imgur', pattern: 'https://imgur.com/t/$1' },
   { name: 'Nico Nico Seiga', pattern: 'https://seiga.nicovideo.jp/tag/$1' },
   { name: 'Pinterest', pattern: 'https://www.pinterest.com/search/pins/?q=%23$1' },
