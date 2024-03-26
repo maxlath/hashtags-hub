@@ -102,7 +102,6 @@ const microbloggingPlatforms = [
   { name: 'Mastodon', pattern: 'https://wikis.world/tags/$1', tags: [ 'libre' ] },
   { name: 'Medium', pattern: 'https://medium.com/tag/$1' },
   { name: 'Reddit', pattern: 'https://www.reddit.com/t/$1/' },
-  { name: 'Taringa!', pattern: 'https://www.taringa.net/tags/$1' },
   { name: 'Tumblr', pattern: 'https://www.tumblr.com/tagged/$1' },
   { name: 'Twitter', pattern: 'https://twitter.com/hashtag/$1' },
   { name: 'Weibo', pattern: 'https://s.weibo.com/weibo/%23$1%23' },
