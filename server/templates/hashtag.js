@@ -1,54 +1,59 @@
-module.exports = hashtag => `<!DOCTYPE html>
+const escapeHtml = require('escape-html')
+
+module.exports = hashtag => {
+  const sanitizedHashtag = escapeHtml(hashtag)
+  return `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>${hashtag} - hashtag hub</title>
+  <title>${sanitizedHashtag} - hashtag hub</title>
   <link rel="stylesheet" href="/public/style.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 </head>
 <body>
-  <h1>#${hashtag}</h1>
+  <h1>#${sanitizedHashtag}</h1>
   <main>
     <section>
       <h2>Microblogging</h2>
-      <ul>${getLinksList(microbloggingPlatforms, hashtag)}</ul>
+      <ul>${getLinksList(microbloggingPlatforms, sanitizedHashtag)}</ul>
     </section>
     <section>
       <h2>Image</h2>
-      <ul>${getLinksList(imagePlatforms, hashtag)}</ul>
+      <ul>${getLinksList(imagePlatforms, sanitizedHashtag)}</ul>
     </section>
     <section>
       <h2>Video</h2>
-      <ul>${getLinksList(videoPlatforms, hashtag)}</ul>
+      <ul>${getLinksList(videoPlatforms, sanitizedHashtag)}</ul>
     </section>
     <section>
       <h2>Audio</h2>
-      <ul>${getLinksList(audioPlatforms, hashtag)}</ul>
+      <ul>${getLinksList(audioPlatforms, sanitizedHashtag)}</ul>
     </section>
     <section>
       <h2>Code</h2>
-      <ul>${getLinksList(codePlatforms, hashtag)}</ul>
+      <ul>${getLinksList(codePlatforms, sanitizedHashtag)}</ul>
     </section>
     <section>
       <h2>Miscellaneous</h2>
-      <ul>${getLinksList(miscellaneous, hashtag)}</ul>
+      <ul>${getLinksList(miscellaneous, sanitizedHashtag)}</ul>
     </section>
     <section>
       <h2>Wikimedia</h2>
-      <ul>${getLinksList(wikimediaSites, hashtag)}</ul>
+      <ul>${getLinksList(wikimediaSites, sanitizedHashtag)}</ul>
     </section>
   </main>
 </body>
 </html>`
+}
 
-const getLinksList = (list, hashtag) => {
+const getLinksList = (list, sanitizedHashtag) => {
   return list
-  .map(getlink(hashtag))
+  .map(getlink(sanitizedHashtag))
   .join('\n')
 }
 
-const getlink = hashtag => platform => {
-  let urlHashtag = hashtag
+const getlink = sanitizedHashtag => platform => {
+  let urlHashtag = sanitizedHashtag
   if (platform.separator) {
     urlHashtag = urlHashtag.replace(/[\s-]/g, platform.separator)
   }
@@ -62,8 +67,8 @@ const getlink = hashtag => platform => {
   const article = platform.article || 'on'
   return `<li class="platform">
     ${getIcon(platform)}
-    <a href="${url}" title="#${hashtag} ${article} ${platform.name}" rel="noopener">
-      <span class="code">#${hashtag}</span> ${article} <strong>${platform.name}</strong>
+    <a href="${url}" title="#${sanitizedHashtag} ${article} ${platform.name}" rel="noopener">
+      <span class="code">#${sanitizedHashtag}</span> ${article} <strong>${platform.name}</strong>
     </a>
     ${getTags(platform)}
   </li>`

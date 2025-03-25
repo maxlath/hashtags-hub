@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "config": "^3.2.4",
+    "escape-html": "^1.0.3",
     "express": "^4.17.1"
   }
 }
