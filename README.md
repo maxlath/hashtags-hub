@@ -6,7 +6,7 @@ A web service to get links to hashtag pages on different web platforms. The main
 
 ### Development
 ```sh
-git clone https://github.com/maxlath/hashtags-hub
+git clone https://codeberg.org/maxlath/hashtags-hub
 cd hashtags-hub
 npm install
 npm run watch
@@ -17,7 +17,7 @@ npm run watch
 ```sh
 mkdir -p ~/www
 cd ~/www
-git clone https://github.com/maxlath/hashtags-hub js
+git clone https://codeberg.org/maxlath/hashtags-hub js
 cd js
 
 # See https://wikitech.wikimedia.org/wiki/Help:Toolforge/Web#node.js_web_services
@@ -33,7 +33,7 @@ webservice --backend=kubernetes node10 start
 kubectl logs -f $(kubectl get pods | grep hashtags-hub | grep Running | awk '{print $1}')
 ```
 
-*see also [`Hub` setup instructions](https://github.com/maxlath/hub/blob/master/docs/deploy.md)*
+*see also [`Hub` setup instructions](https://codeberg.org/maxlath/hub/src/branch/main/docs/deploy.md)*
 
 ## Development
 
