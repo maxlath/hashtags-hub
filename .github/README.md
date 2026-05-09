@@ -1,1 +1,1 @@
-## ⚠<fe0f> This repository was moved to Codeberg 👉 https://codeberg.org/maxlath/hashtags-hub
+## ⚠️ This repository was moved to Codeberg 👉 https://codeberg.org/maxlath/hashtags-hub
